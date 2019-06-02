@@ -1,11 +1,11 @@
 module.exports = {
   development: {
-    username: "express-mvp-dbuser",
+    username: "jakeriordan",
     password: "123.456",
-    database: "express-mvp-db",
+    database: "postgres",
     host: "127.0.0.1",
     dialect: "postgres",
-    post: 5432
+    port: 5432
   },
   test: {
     username: "root",
