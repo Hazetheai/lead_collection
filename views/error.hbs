@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--<base href="/">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="leads">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>{{message}}</h1>
+          <h2 class="text-danger">{{error.status}}</h2>
+          <pre class="text-danger">{{error.stack}}</pre>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>

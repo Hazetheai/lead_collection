@@ -1,0 +1,68 @@
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!--<base href="/">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="leads">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand navbar-light bg-light"><a href="/" aria-label="Golden Goose"
+        class="navbar-brand mr-0 mr-md-2"><img src="/images/golden-goose.svg" width="36" height="36"></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="/leads" class="nav-link">Leads</a></li>
+        </ul>
+      </div>
+      <div class="navbar-right">{{#if user}}
+        <span class="navbar-text">Hello {{user.email}}!</span>{{/if}}</div>
+      <div class="navbar-right">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="/signup" class="nav-link">Sign up</a></li>
+          <li class="nav-item"><a href="/login" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- TODO: Fix unsupported jade mixin -->
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5">
+          <h1>Leads</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Email</th>
+                <th scope="col">Actions</th>
+                <th scope="col"> </th>
+              </tr>
+              <tr></tr>
+            </thead>
+            <tbody>{{#each leads as |lead|}}
+              <tr id="{{lead.id}}">
+                <td><span>{{lead.email}}</span></td>
+                <td><a href="/lead/{{lead.id}}">Details</a></td>
+                <td><button onclick="{{`deleteLead('{{lead.id}}')`}}" class="btn btn-primary">Delete </button></td>
+              </tr>
+              {{/each}}</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      crossorigin="anonymous"></script>
+    <!-- TODO: Fix unsupported jade mixin -->
+    <script src="/javascripts/leads.js"></script>
+  </header>
+</body>
+
+</html>
