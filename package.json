@@ -12,6 +12,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "express-session": "^1.16.1",
+    "hbs": "^4.0.4",
     "http-errors": "~1.6.3",
     "lodash": "^4.17.11",
     "morgan": "~1.9.1",
@@ -22,8 +23,9 @@
     "pg": "^7.11.0",
     "pg-hstore": "^2.3.2",
     "pug": "^2.0.3",
+    "pug2hbs": "^1.0.5",
     "sequelize": "^5.8.7",
-    "sequelize-cli": "^5.4.0",
+    "sequelize-cli": "^5.5.0",
     "validator": "^11.0.0"
   },
   "devDependencies": {
